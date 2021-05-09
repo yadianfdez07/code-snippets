@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>xUnit Fact Test</Title>
+            <Author></Author>
+            <Description>Stub-out xUnit Fact test with arrange act and assert sections</Description>
+            <Shortcut>fact</Shortcut>
+        </Header>
+        <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>Xunit</Namespace>
+                </Import>
+            </Imports>
+            <Declarations>
+                <Literal>
+                    <ID>TestMethodName</ID>
+                    <ToolTip>Replace with the name of the test method</ToolTip>
+                    <Default>TestMethod</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>Fact</ID>
+                    <Function>SimpleTypeName(global::Xunit.Fact)</Function>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp" Kind="method decl">
+                <![CDATA[[Fact]
+                public void $TestMethodName$()
+                {
+                    // arrange
+                    $end$
+
+                    // act
+
+                    // assert
+                }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
